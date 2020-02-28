@@ -1,9 +1,28 @@
 <template>
-  <div class="flex items-center justify-center h-screen">
-    <div class="w-16 h-16 bg-blue-500 rounded-full"></div>
+  <div class="container h-screen py-8 mx-auto">
+    <section class="">
+      <h2 class="mb-8 text-5xl text-gray-800">Input</h2>
+      <base-input
+        label="Name"
+        v-model="demo"
+        placeholder="Some placeholder"
+      ></base-input>
+    </section>
   </div>
 </template>
 
 <script>
-export default {};
+import BaseInput from "./components/BaseInput";
+
+export default {
+  components: {
+    BaseInput
+  },
+
+  data() {
+    return {
+      demo: ""
+    };
+  }
+};
 </script>
